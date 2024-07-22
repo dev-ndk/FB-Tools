@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "FBTools",
+    "description": "Công cụ hỗ trợ Facebook",
+    "author": {
+        "email": "khanh841329@gmail.com"
+    },
+    "version": "1.0",
+    "permissions": ["clipboardRead", "scripting", "activeTab", "tabs", "cookies", "downloads"],
+    "host_permissions": ["*://*.facebook.com/"],
+    "action": {
+        "default_popup": "/popup/index.html"
+    },
+    "icons": {
+        "16": "/images/16x16.png",
+        "32": "/images/32x32.png",
+        "48": "/images/48x48.png",
+        "128": "/images/128x128.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["/scripts/script.js"],
+            "matches": ["*://*.facebook.com/", "*://*.fb.watch/*"]
+        }
+    ]
+}

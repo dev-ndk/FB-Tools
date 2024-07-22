@@ -1,0 +1,382 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css//sweetalert2.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body style="width: 450px">
+        <div class="container my-3">
+            <div class="d-flex gap-2 align-items-center p-1">
+                <img class="d-block" src="/images/32x32.png" alt="FB" />
+                <h1 class="m-0 fw-bold fs-5">FB Tools</h1>
+
+                <p class="ms-auto m-0 text-center text-black-50 fs-6">
+                    Software By
+                    <a class="text-decoration-none" href="https://www.facebook.com/ndk.fullstack.dev" target="_blank">DEV NDK</a>
+                </p>
+            </div>
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs fw-medium" id="myTab" role="tablist">
+                            <li id="tab-1" class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link active"
+                                    id="token-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#token-tab-pane"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="token-tab-pane"
+                                    aria-selected="true"
+                                >
+                                    TOKEN
+                                </button>
+                            </li>
+                            <li id="tab-2" class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    id="fbstate-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#fbstate-tab-pane"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="fbstate-tab-pane"
+                                    aria-selected="true"
+                                >
+                                    FB-STATE
+                                </button>
+                            </li>
+                            <li id="tab-3" class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    id="download-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#download-tab-pane"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="download-tab-pane"
+                                    aria-selected="true"
+                                >
+                                    DOWNLOAD
+                                </button>
+                            </li>
+                            <li id="tab-4" class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link"
+                                    id="other-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#other-tab-pane"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="other-tab-pane"
+                                    aria-selected="true"
+                                >
+                                    OTHER
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content py-3" id="myTabContent">
+                            <div class="tab-pane fade show active" id="token-tab-pane" role="tabpanel" aria-labelledby="token-tab">
+                                <h2 style="font-size: 1.2rem">Get Token Facebook</h2>
+                                <div class="input-group my-3">
+                                    <select class="form-select" id="app-id">
+                                        <option selected value="350685531728">EAAAAUa / Facebook for Android</option>
+                                        <option value="256002347743983">EAADo1 / Facebook Messenger for Android</option>
+                                        <option value="6628568379">EAAAAAY / Facebook for iPhone</option>
+                                        <option value="237759909591655">EAADYP / Facebook Messenger for iPhone</option>
+                                        <option value="202805033077166">EAAC4c / Messenger for iOS (Dev)</option>
+                                        <option value="275254692598279">EAAD6V7o / Facebook Lite</option>
+                                        <option value="200424423651082">EAAC2SP / Messenger Lite</option>
+                                        <option value="438142079694454">EAAGOfOc / Ads Manager App for Android</option>
+                                        <option value="1479723375646806">EAAVBz / Ads Manager App for iOS</option>
+                                        <option value="165907476854626">EAACW5F / Pages Manager for iOS</option>
+                                        <option value="121876164619130">EAABu2 / Pages Manager for Android</option>
+                                        <option value="1174099472704185">EAAQr1 / Messenger Kids for iOS</option>
+                                        <option value="436761779744620">EAAGNO4a / Business Manager</option>
+                                        <option value="522404077880990">EAAHbH6 / Messenger for Linux</option>
+                                        <option value="184182168294603">EAACng0 / Messenger for iOS (In-House)</option>
+                                        <option value="173847642670370">EAACeHQ / Facebook for iPad</option>
+                                    </select>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button id="btn-get-token" class="btn btn-primary" type="button">Lấy token</button>
+                                </div>
+                                <div class="input-group mt-3 d-none" id="result-token">
+                                    <input type="text" class="form-control" readonly id="input-token" />
+                                    <button class="btn btn-outline-primary" type="button" id="btn-copy-token">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            class="bi bi-copy"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="fbstate-tab-pane" role="tabpanel" aria-labelledby="fbstate-tab">
+                                <h2 style="font-size: 1.2rem">Get FB-STATE</h2>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="floatingTextarea" readonly style="height: 200px"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-between my-3 gap-2">
+                                    <div class="input-group" style="width: 60%">
+                                        <input id="input-name-file" type="text" value="fbstate" class="form-control" />
+                                        <button
+                                            id="btn-down-fbstate"
+                                            type="button"
+                                            class="btn btn-outline-success d-flex justify-content-center align-items-center gap-1"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="16"
+                                                height="16"
+                                                fill="currentColor"
+                                                class="bi bi-arrow-down-circle"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"
+                                                />
+                                            </svg>
+                                            Download
+                                        </button>
+                                    </div>
+                                    <button
+                                        id="btn-copy-fbstate"
+                                        type="button"
+                                        class="btn btn-outline-primary d-flex justify-content-center align-items-center gap-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            class="bi bi-copy"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                                            />
+                                        </svg>
+                                        Copy FB-State
+                                    </button>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-3 gap-2">
+                                    <button
+                                        id="btn-copy-cookie"
+                                        type="button"
+                                        class="btn btn-outline-info w-50 d-flex justify-content-center align-items-center gap-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            class="bi bi-copy"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                                            />
+                                        </svg>
+                                        Copy Cookie
+                                    </button>
+
+                                    <button
+                                        id="btn-logout-fbstate"
+                                        type="button"
+                                        class="btn btn-outline-danger w-50 d-flex justify-content-center align-items-center gap-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            class="bi bi-box-arrow-in-right"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+                                            />
+                                        </svg>
+                                        Logout
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="download-tab-pane" role="tabpanel" aria-labelledby="download-tab">
+                                <h2 id="download-title" style="font-size: 1.2rem">Facebook Video Downloader</h2>
+                                <div class="my-3" id="download-form">
+                                    <div class="input-group mb-3">
+                                        <input id="input-url-download" type="text" class="form-control" placeholder="Nhập link video" />
+                                        <button id="btn-paste-url" type="button" class="btn btn-outline-primary">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="16"
+                                                height="16"
+                                                fill="currentColor"
+                                                class="bi bi-clipboard"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"
+                                                />
+                                                <path
+                                                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <button
+                                        id="btn-download-video"
+                                        type="button"
+                                        class="btn btn-outline-success w-100 d-flex justify-content-center align-items-center gap-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            class="bi bi-arrow-down-circle"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"
+                                            />
+                                        </svg>
+                                        Download
+                                    </button>
+                                </div>
+                                <div class="my-3 d-none" id="download-result">
+                                    <div class="row">
+                                        <ul class="nav nav-tabs fw-medium" id="myTab2" role="tablist">
+                                            <li id="tab-5" class="nav-item" role="presentation">
+                                                <button
+                                                    class="nav-link d-flex align-items-center justify-content-center gap-2 active"
+                                                    id="video-tab"
+                                                    data-bs-toggle="tab"
+                                                    data-bs-target="#video-tab-pane"
+                                                    type="button"
+                                                    role="tab"
+                                                    aria-controls="video-tab-pane"
+                                                    aria-selected="true"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        fill="currentColor"
+                                                        class="bi bi-camera-reels"
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />
+                                                        <path
+                                                            d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1"
+                                                        />
+                                                        <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                                                    </svg>
+                                                    VIDEO
+                                                </button>
+                                            </li>
+                                            <li id="tab-6" class="nav-item" role="presentation">
+                                                <button
+                                                    class="nav-link d-flex align-items-center justify-content-center gap-2"
+                                                    id="audio-tab"
+                                                    data-bs-toggle="tab"
+                                                    data-bs-target="#audio-tab-pane"
+                                                    type="button"
+                                                    role="tab"
+                                                    aria-controls="audio-tab-pane"
+                                                    aria-selected="true"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        fill="currentColor"
+                                                        class="bi bi-music-note-beamed"
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <path
+                                                            d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"
+                                                        />
+                                                        <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z" />
+                                                        <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
+                                                    </svg>
+                                                    AUDIO
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content py-3">
+                                            <div
+                                                class="tab-pane fade show active"
+                                                id="video-tab-pane"
+                                                role="tabpanel"
+                                                aria-labelledby="video-tab"
+                                            ></div>
+                                            <div class="tab-pane fade" id="audio-tab-pane" role="tabpanel" aria-labelledby="audio-tab"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-none" id="button-home">
+                                    <hr />
+                                    <button
+                                        type="button"
+                                        class="m-auto btn btn-outline-primary d-flex align-items-center justify-content-center gap-1 w-50 btn-sm"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            class="bi bi-house"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+                                            />
+                                        </svg>
+                                        HOME
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="other-tab-pane" role="tabpanel" aria-labelledby="other-tab">
+                                <button type="button" class="btn btn-primary w-100 btn-sm text-uppercase coming-soon">Get uid facebook</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/scripts/popper.min.js"></script>
+        <script src="/scripts/bootstrap.min.js"></script>
+        <script src="/scripts/bootstrap.bundle.min.js"></script>
+        <script src="/scripts/sweetalert2.all.min.js"></script>
+        <script src="/scripts/jquery-3.7.1.min.js"></script>
+        <script src="/scripts/lodash.min.js"></script>
+        <script src="/scripts/axios.min.js"></script>
+        <script src="/scripts/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.max-lines-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Số dòng tối đa */
+    -webkit-box-orient: vertical;
+    max-height: calc(1.2em * 3); /* Chiều cao tối đa (1.2em là chiều cao của mỗi dòng) */
+    line-clamp: 3; /* Số dòng tối đa */
+}
+
+.shadow_hover:hover {
+    transition: all 0.3s;
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.25) !important;
+}
