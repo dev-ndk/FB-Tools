@@ -28,7 +28,7 @@
     git clone https://github.com/dev-ndk/FB-Tools.git
     ```
 
-2. Mở Google Chrome và truy cập chrome://extensions/.
+2. Mở Google Chrome và truy cập [chrome://extensions/](chrome://extensions/).
 3. Bật chế độ "Developer mode" ở góc trên bên phải.
 4. Nhấp vào "Load unpacked" và chọn thư mục fb-tools.
 
