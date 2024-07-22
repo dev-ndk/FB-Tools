@@ -2,7 +2,7 @@
 
 ## Giới Thiệu
 
-**FB-TOOLS** là bộ công cụ mạnh mẽ hỗ trợ người dùng Facebook với nhiều tính năng hữu ích. Dễ sử dụng và hiệu quả, FB-TOOLS giúp bạn tương tác và quản lý nội dung trên Facebook một cách thuận tiện. Hiện tại, công cụ này được phát triển dưới dạng extension cho Google Chrome.
+**FB-TOOLS** là bộ công cụ mạnh mẽ hỗ trợ người dùng Facebook với nhiều tính năng hữu ích. Dễ sử dụng và hiệu quả. Hiện tại, công cụ này được phát triển dưới dạng extension cho Google Chrome.
 
 ## Tính Năng
 
@@ -36,7 +36,7 @@
 
 -   **Tải Video Facebook**:
 
-    -   Chọn loại video bạn muốn tải (Watch, Story, Reel, nhóm riêng tư, phần bình luận).
+    -   Chọn loại video bạn muốn tải (Watch, Story, Reel, nhóm riêng tư, phần bình luận **_(url kèm comment_id)_**).
     -   Nhập URL của video và nhấn "Tải xuống".
 
 -   **Get Token Facebook**:
