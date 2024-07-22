@@ -25,7 +25,7 @@
 1. Clone repository:
 
     ```bash
-    git clone https://github.com/your-repo/fb-tools.git
+    git clone https://github.com/dev-ndk/FB-Tools.git
     ```
 
 2. Mở Google Chrome và truy cập chrome://extensions/.
